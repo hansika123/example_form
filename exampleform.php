@@ -1,0 +1,41 @@
+<?php include 'example.php' ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>form example</title>
+</head>
+<body> 
+
+  <form method="post" action="example.php">
+<input type="text" name="name"> Name
+<input type="text" name="email"> Email
+<button type="submit" name="submit" value="submit"> Send </button>
+
+<?php if(!empty($message)){ ?>
+    <strong> <?php echo $message; ?></strong>
+    <?php } ?>
+</form>
+
+<!-- <script src="https://smtpjs.com/v3/smtp.js"> </script>
+
+<script>
+function sendEmail(){
+    Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "hansika@spinnaker.lk",
+    Password : "1234",
+    To : 'hansikak1998@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "Example Test",
+    Body : ""
+}).then(
+  message => alert(message)
+);
+} 
+
+</script> -->
+
+
+</body>
+</html>
